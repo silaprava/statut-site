@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -69,34 +70,14 @@
       <div class="form-card">
         <h3 style="color:var(--cream-50); font-size:26px; margin-bottom:8px;">Замовити консультацію</h3>
         <p style="color:rgba(247,245,240,.6); font-size:14px; margin-bottom:32px;">Опишіть ситуацію коротко — партнер профільної практики зв'яжеться з вами.</p>
-        <form class="contact-form">
-          <div class="form-row">
-            <label for="name">Ім'я</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-row">
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-          <div class="form-row">
-            <label for="topic">Напрям</label>
-            <select id="topic" name="topic">
-              <option>Корпоративне право та M&amp;A</option>
-              <option>Судові спори та арбітраж</option>
-              <option>Податкове консультування</option>
-              <option>Нерухомість та будівництво</option>
-              <option>Трудове право</option>
-              <option>Інтелектуальна власність</option>
-              <option>Інше</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="message">Коротко про ситуацію</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Надіслати заявку</button>
-          <p class="form-note">Надсилаючи форму, ви погоджуєтесь на обробку персональних даних відповідно до політики конфіденційності фірми.</p>
-        </form>
+
+        <!-- Форма HubSpot: заявки автоматично потрапляють у CRM -->
+        <div style="background:var(--cream-50); padding:24px; border-radius:2px;">
+          <script src="https://js-eu1.hsforms.net/forms/embed/149105346.js" defer></script>
+          <div class="hs-form-frame" data-region="eu1" data-form-id="00fd03cc-32eb-453c-8b86-5759928bd815" data-portal-id="149105346"></div>
+        </div>
+
+        <p class="form-note">Надсилаючи форму, ви погоджуєтесь на обробку персональних даних відповідно до політики конфіденційності фірми.</p>
       </div>
 
     </div>
