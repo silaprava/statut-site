@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Розлучення та сімейні спори — Сила права</title>
+<meta name="description" content="Юридичний супровід розлучення та сімейних спорів: оформлення розлучення під ключ, дистанційний супровід, поділ майна, аліменти.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">СИЛА <span>ПРАВА</span><small>Юридична компанія</small></a>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="services.html" aria-current="page">Послуги</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+      <div class="nav-cta">
+        <span class="tel">+380 44 000 00 00</span>
+        <a href="contacts.html" class="btn btn-primary">Консультація</a>
+      </div>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Послуги · Сімейне право</p>
+    <h1>Розлучення та сімейні спори</h1>
+    <p class="desc">Оформлюємо розірвання шлюбу під ключ і вирішуємо супутні майнові питання — дистанційно, без зайвого стресу для клієнта.</p>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <div class="mend-rule on-light" style="margin-bottom:64px;"></div>
+
+    <div class="statute">
+      <div class="statute-item">
+        <div class="title">
+          <span class="art">01</span>
+          <h3>Розлучення під ключ</h3>
+        </div>
+        <div class="body">
+          <p>Оформлення розлучення через органи ДРАЦС або в судовому порядку — залежно від ситуації клієнта. Готуємо всі документи та супроводжуємо процес від початку до отримання рішення.</p>
+        </div>
+      </div>
+      <div class="statute-item">
+        <div class="title">
+          <span class="art">02</span>
+          <h3>Дистанційний супровід</h3>
+        </div>
+        <div class="body">
+          <p>Ведемо справу без обов'язкової особистої присутності клієнта — зручно для тих, хто перебуває за кордоном, в іншому місті чи не має можливості приїжджати особисто.</p>
+        </div>
+      </div>
+      <div class="statute-item">
+        <div class="title">
+          <span class="art">03</span>
+          <h3>Супутні майнові питання</h3>
+        </div>
+        <div class="body">
+          <p>Вирішуємо питання, які зазвичай виникають разом з розлученням: поділ спільного нерухомого майна, аліменти, встановлення прав власності на майно подружжя.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Кому підходить ця послуга</h2>
+      <p class="desc">Найчастіші ситуації, з якими до нас звертаються.</p>
+    </div>
+    <div class="practice-grid">
+      <div class="practice-card">
+        <span class="num">§ 01</span>
+        <h3>Обидва з подружжя згодні на розлучення</h3>
+        <p>Найшвидший шлях — оформлення через ДРАЦС без звернення до суду.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">§ 02</span>
+        <h3>Один з подружжя проти розлучення</h3>
+        <p>Судовий порядок розірвання шлюбу з повним юридичним супроводом справи.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">§ 03</span>
+        <h3>Є спільне майно чи діти</h3>
+        <p>Паралельно вирішуємо питання поділу майна, аліментів та прав власності.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">§ 04</span>
+        <h3>Клієнт за кордоном або в іншому місті</h3>
+        <p>Повністю дистанційний супровід — без необхідності особистої присутності.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Готові розповісти про вашу ситуацію?</h2>
+    <p>Опишіть коротко обставини — ми підкажемо найшвидший законний шлях вирішення.</p>
+    <a href="contacts.html" class="btn btn-primary">Замовити консультацію</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">СИЛА <span>ПРАВА</span></a>
+        <p>Юридична компанія, що відновлює права власності на нерухомість у постраждалих від війни регіонах.</p>
+      </div>
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="services.html">Послуги</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Практики</h4>
+        <ul>
+          <li><a href="services.html">Відновлення документів</a></li>
+          <li><a href="services.html">«єВідновлення»</a></li>
+          <li><a href="services.html">Реєстрація нерухомості</a></li>
+          <li><a href="rozluchennya.html">Розлучення</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <ul>
+          <li><a href="tel:+380440000000">+380 44 000 00 00</a></li>
+          <li><a href="mailto:sila.pravaa@gmail.com">sila.pravaa@gmail.com</a></li>
+          <li>Онлайн-офіс, вся Україна</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Сила права. Усі права захищено.</span>
+      <span>Юридичні послуги в Україні</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
