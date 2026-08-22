@@ -242,7 +242,7 @@ section{ padding:88px 0; }
 /* ---------- practice grid ---------- */
 .practice-grid{
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:1px;
   background:var(--line-light);
   border:1px solid var(--line-light);
@@ -256,10 +256,12 @@ section{ padding:88px 0; }
 .practice-card .num{ font-family:var(--font-mono); font-size:12px; color:var(--gold-500); }
 .practice-card h3{ font-size:22px; margin-top:16px; }
 .practice-card p{ margin-top:12px; font-size:14px; color:var(--ink-600); }
-.practice-card a.more{
-  display:inline-block; margin-top:18px; font-size:13px; font-weight:600;
+.more{
+  display:inline-block; font-size:13px; font-weight:600;
   border-bottom:1px solid var(--gold-500); padding-bottom:2px;
 }
+.practice-card a.more{ margin-top:18px; }
+.service-row a.more{ margin-top:16px; color:var(--navy-900); }
 
 @media (max-width:860px){ .practice-grid{ grid-template-columns:1fr 1fr; } }
 @media (max-width:560px){ .practice-grid{ grid-template-columns:1fr; } }
@@ -458,3 +460,57 @@ section{ padding:88px 0; }
 }
 .page-hero h1{ font-size:clamp(34px,4.4vw,52px); }
 .page-hero .desc{ margin-top:16px; max-width:56ch; color:rgba(247,245,240,.7); font-size:16px; }
+
+/* ---------- restoration motif (signature illustration) ---------- */
+.restore-mark{ display:block; }
+.restore-mark .dashed{ stroke:rgba(247,245,240,.35); stroke-width:1.5; stroke-dasharray:5 5; fill:none; }
+.restore-mark .solid{ stroke:var(--gold-400); stroke-width:1.5; fill:none; }
+.restore-mark .fill-solid{ fill:var(--gold-500); opacity:.14; }
+.restore-mark .dot{ fill:var(--gold-400); }
+
+.hero-visual{
+  position:relative;
+  aspect-ratio:1/1;
+  max-width:420px;
+}
+
+/* ---------- dashed-to-solid divider: recurring restoration motif ---------- */
+.mend-rule{
+  height:1px;
+  background:linear-gradient(to right,
+    transparent 0%,
+    rgba(247,245,240,.3) 0%, rgba(247,245,240,.3) 46%,
+    transparent 46%, transparent 50%,
+    var(--gold-500) 50%, var(--gold-500) 100%);
+  background-size: 12px 1px, 100% 1px;
+  width:100%;
+}
+.mend-rule.on-light{
+  background:linear-gradient(to right,
+    transparent 0%,
+    rgba(27,30,36,.22) 0%, rgba(27,30,36,.22) 46%,
+    transparent 46%, transparent 50%,
+    var(--gold-500) 50%, var(--gold-500) 100%);
+}
+
+/* ---------- feature icon row ---------- */
+.feature-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:1px;
+  background:var(--line-light);
+  border-top:1px solid var(--line-light);
+  border-bottom:1px solid var(--line-light);
+}
+.feature-item{
+  background:var(--cream-50);
+  padding:32px 28px;
+  display:flex; gap:16px; align-items:flex-start;
+}
+.feature-item .ico{
+  flex:none; width:38px; height:38px;
+  color:var(--gold-500);
+}
+.feature-item .ico svg{ width:100%; height:100%; }
+.feature-item h4{ font-family:var(--font-body); font-weight:600; font-size:15px; margin-bottom:6px; }
+.feature-item p{ font-size:13.5px; color:var(--ink-600); line-height:1.5; }
