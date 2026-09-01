@@ -7,6 +7,19 @@
 <title>Сила права — Юридична компанія</title>
 <meta name="description" content="Сила права: відновлення документів на нерухомість, оформлення прав власності для «єВідновлення», технічна інвентаризація, реєстрація нерухомості та сімейні спори.">
 <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  /* Прибираємо сірий фон, що просвічує крізь порожню 6-ту комірку сітки послуг */
+  .practice-grid {
+    background: transparent !important;
+  }
+  .practice-card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+</style>
 </head>
 <body>
 
@@ -42,67 +55,21 @@
         </div>
       </div>
       <div class="hero-aside">
-        <svg class="restore-mark hero-visual" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ілюстрація: будинок відновлюється — половина контуру пунктирна, половина суцільна золота">
-          <!-- roof -->
-          <path class="dashed" d="M70 190 L200 90" />
-          <path class="solid" d="M200 90 L330 190" />
-          <!-- walls -->
-          <path class="dashed" d="M70 190 L70 320" />
-          <path class="solid" d="M330 190 L330 320" />
-          <!-- base -->
-          <path class="dashed" d="M70 320 L200 320" />
-          <path class="solid" d="M200 320 L330 320" />
-          <!-- center seam -->
-          <line x1="200" y1="90" x2="200" y2="320" class="dashed" stroke-dasharray="3 6" />
-          <!-- door -->
-          <rect x="178" y="255" width="44" height="65" class="solid" />
-          <!-- window left (broken/dashed) -->
-          <rect x="100" y="225" width="46" height="46" class="dashed" />
-          <!-- window right (restored/solid, filled) -->
-          <rect x="254" y="225" width="46" height="46" class="solid" />
-          <rect x="254" y="225" width="46" height="46" class="fill-solid" />
-          <!-- restoration stamp -->
-          <circle cx="200" cy="190" r="34" class="solid" />
-          <path class="solid" d="M186 190 L196 202 L216 176" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        <div class="clause">
+          <span class="num">§ 1</span>
+          <p>Відновлення прав власності навіть за відсутності первинних паперових документів.</p>
+        </div>
+        <div class="clause">
+          <span class="num">§ 2</span>
+          <p>Повний супровід заявок на компенсацію за програмою «єВідновлення».</p>
+        </div>
+        <div class="clause">
+          <span class="num">§ 3</span>
+          <p>Фіксована вартість послуг обговорюється до початку роботи — без прихованих платежів.</p>
+        </div>
       </div>
     </div>
   </div>
-</section>
-
-<div class="feature-row">
-  <div class="feature-item">
-    <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V9L12 3L20 9V20H14V14H10V20H4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="3 3"/></svg></span>
-    <div>
-      <h4>Без первинних документів</h4>
-      <p>Відновлюємо права власності навіть за відсутності паперових оригіналів.</p>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12L9 17L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    <div>
-      <h4>«єВідновлення» під ключ</h4>
-      <p>Повний супровід заявки на компенсацію за знищене або пошкоджене житло.</p>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M12 8V12L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-    <div>
-      <h4>Термінові строки</h4>
-      <p>Пришвидшене внесення даних у реєстр там, де це має значення для клієнта.</p>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-    <div>
-      <h4>Фіксована вартість</h4>
-      <p>Вартість обговорюємо до початку роботи — без прихованих платежів.</p>
-    </div>
-  </div>
-</div>
-
-<section class="section-light">
-  <div class="mend-rule on-light" style="max-width:1160px; margin:0 auto;"></div>
 </section>
 
 <div class="stats-bar section-dark">
@@ -222,7 +189,6 @@
           <li><a href="services.html">Відновлення документів</a></li>
           <li><a href="services.html">«єВідновлення»</a></li>
           <li><a href="services.html">Реєстрація нерухомості</a></li>
-          <li><a href="rozluchennya.html">Розлучення</a></li>
         </ul>
       </div>
       <div>
