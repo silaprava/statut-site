@@ -474,6 +474,38 @@ section{ padding:88px 0; }
   max-width:420px;
 }
 
+/* ---------- photo hero (licensed images) ---------- */
+.hero-photo{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border:1px solid var(--line-dark);
+  display:block;
+}
+.hero-banner{
+  margin-top:56px;
+  border:1px solid var(--line-dark);
+  overflow:hidden;
+}
+.hero-banner img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  display:block;
+}
+@media (max-width:760px){
+  .hero-banner img{ height:220px; }
+}
+.photo-frame{
+  border:1px solid var(--line-light);
+  overflow:hidden;
+}
+.photo-frame img{
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+
 /* ---------- dashed-to-solid divider: recurring restoration motif ---------- */
 .mend-rule{
   height:1px;
