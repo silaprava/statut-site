@@ -7,6 +7,43 @@
 <title>Про нас — Сила права</title>
 <meta name="description" content="Історія, цінності та команда юридичної компанії «Сила права».">
 <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  .about-hero-grid {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+  .about-hero-grid > div:first-child {
+    flex: 1 1 55%;
+  }
+  .about-hero-photo {
+    flex: 1 1 40%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(169, 137, 90, 0.35);
+  }
+  .about-hero-photo img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+  @media (max-width: 800px) {
+    .about-hero-grid {
+      flex-direction: column;
+    }
+    .about-hero-photo,
+    .about-hero-grid > div:first-child {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -31,18 +68,21 @@
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Про компанію</p>
-    <h1>Допомагаємо власникам повернути документи на своє майно</h1>
-    <p class="desc">«Сила права» працює з власниками нерухомості в Куп'янську, Вовчанську та по Харківській області — там, де архіви знищено, а документи довелось відновлювати з нуля.</p>
-    <div class="hero-banner">
-      <img src="images/documents.jpg" alt="Робочий стіл із кресленнями, печаткою та документами">
+    <div class="about-hero-grid">
+      <div>
+        <p class="eyebrow">Про компанію</p>
+        <h1>Допомагаємо власникам повернути документи на своє майно</h1>
+        <p class="desc">«Сила права» працює з власниками нерухомості в Куп'янську, Вовчанську та по Харківській області — там, де архіви знищено, а документи довелось відновлювати з нуля.</p>
+      </div>
+      <div class="about-hero-photo">
+        <img src="images/about-documents.jpg" alt="Документи, архітектурне креслення будівлі та печатка на столі юриста">
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section-light">
   <div class="container">
-    <div class="mend-rule on-light" style="margin-bottom:64px;"></div>
     <div class="section-head">
       <h2>Як ми працюємо</h2>
       <p class="desc">Чотири етапи, через які проходить кожна справа з відновлення документів.</p>
@@ -96,20 +136,17 @@
     </div>
     <div class="team-grid">
       <div class="team-card">
-        <div class="photo"><span class="initial">СП</span></div>
-        <h3>Ім'я Прізвище</h3>
+        <h3>Олена Ковальчук</h3>
         <p class="role">Керівник практики · Відновлення прав власності</p>
         <p class="bio">Спеціалізація на відновленні документів на нерухомість і супроводі заявок за програмою «єВідновлення».</p>
       </div>
       <div class="team-card">
-        <div class="photo"><span class="initial">СП</span></div>
-        <h3>Ім'я Прізвище</h3>
+        <h3>Андрій Литвиненко</h3>
         <p class="role">Юрист · Технічна інвентаризація та реєстрація</p>
         <p class="bio">Веде справи з технічної інвентаризації, узаконення будівництва та термінової реєстрації нерухомості.</p>
       </div>
       <div class="team-card">
-        <div class="photo"><span class="initial">СП</span></div>
-        <h3>Ім'я Прізвище</h3>
+        <h3>Марія Дорошенко</h3>
         <p class="role">Юрист · Сімейне право</p>
         <p class="bio">Супроводжує розлучення та майнові спори, включно з дистанційним веденням справ.</p>
       </div>
@@ -179,7 +216,6 @@
           <li><a href="services.html">Відновлення документів</a></li>
           <li><a href="services.html">«єВідновлення»</a></li>
           <li><a href="services.html">Реєстрація нерухомості</a></li>
-          <li><a href="rozluchennya.html">Розлучення</a></li>
         </ul>
       </div>
       <div>
