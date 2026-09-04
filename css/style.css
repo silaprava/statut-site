@@ -242,11 +242,12 @@ section{ padding:88px 0; }
 /* ---------- practice grid ---------- */
 .practice-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:1px;
   background:var(--line-light);
   border:1px solid var(--line-light);
 }
+.practice-grid.grid-5{ grid-template-columns:repeat(5, 1fr); }
 .practice-card{
   background:var(--cream-50);
   padding:36px 32px;
@@ -263,8 +264,9 @@ section{ padding:88px 0; }
 .practice-card a.more{ margin-top:18px; }
 .service-row a.more{ margin-top:16px; color:var(--navy-900); }
 
-@media (max-width:860px){ .practice-grid{ grid-template-columns:1fr 1fr; } }
-@media (max-width:560px){ .practice-grid{ grid-template-columns:1fr; } }
+@media (max-width:1000px){ .practice-grid.grid-5{ grid-template-columns:repeat(2, 1fr); } .practice-grid.grid-5 .practice-card:last-child{ grid-column:1 / -1; } }
+@media (max-width:860px){ .practice-grid:not(.grid-5){ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .practice-grid{ grid-template-columns:1fr; } .practice-grid.grid-5 .practice-card:last-child{ grid-column:auto; } }
 
 /* ---------- stats bar ---------- */
 .stats-bar{
@@ -546,3 +548,122 @@ section{ padding:88px 0; }
 .feature-item .ico svg{ width:100%; height:100%; }
 .feature-item h4{ font-family:var(--font-body); font-weight:600; font-size:15px; margin-bottom:6px; }
 .feature-item p{ font-size:13.5px; color:var(--ink-600); line-height:1.5; }
+
+/* =========================================================
+   АНІМАЦІЇ — органічне проявлення при завантаженні та скролі
+   ========================================================= */
+
+/* ---------- hero: проявлення при завантаженні сторінки ---------- */
+.hero .eyebrow,
+.hero h1,
+.hero .hero-lede,
+.hero .hero-actions,
+.page-hero .eyebrow,
+.page-hero h1,
+.page-hero .desc{
+  opacity:0;
+  transform:translateY(18px);
+  animation:heroIn .7s cubic-bezier(.16,1,.3,1) forwards;
+}
+.hero .eyebrow, .page-hero .eyebrow{ animation-delay:.05s; }
+.hero h1, .page-hero h1{ animation-delay:.15s; }
+.hero .hero-lede, .page-hero .desc{ animation-delay:.28s; }
+.hero .hero-actions{ animation-delay:.4s; }
+
+.hero .hero-aside,
+.page-hero .hero-aside{
+  opacity:0;
+  transform:scale(.97);
+  animation:heroPhotoIn .9s cubic-bezier(.16,1,.3,1) forwards;
+  animation-delay:.2s;
+}
+
+@keyframes heroIn{
+  to{ opacity:1; transform:translateY(0); }
+}
+@keyframes heroPhotoIn{
+  to{ opacity:1; transform:scale(1); }
+}
+
+/* ---------- скрол-проявлення: картки, елементи списків ---------- */
+.practice-card,
+.service-row,
+.team-card,
+.approach-item,
+.statute-item,
+.feature-item,
+.badge-item,
+.stat,
+.section-head{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1);
+}
+.practice-card.is-visible,
+.service-row.is-visible,
+.team-card.is-visible,
+.approach-item.is-visible,
+.statute-item.is-visible,
+.feature-item.is-visible,
+.badge-item.is-visible,
+.stat.is-visible,
+.section-head.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* легкий каскад для елементів однієї сітки/списку */
+.practice-grid .practice-card:nth-child(1){ transition-delay:.03s; }
+.practice-grid .practice-card:nth-child(2){ transition-delay:.09s; }
+.practice-grid .practice-card:nth-child(3){ transition-delay:.15s; }
+.practice-grid .practice-card:nth-child(4){ transition-delay:.21s; }
+.practice-grid .practice-card:nth-child(5){ transition-delay:.27s; }
+
+.feature-row .feature-item:nth-child(1){ transition-delay:.03s; }
+.feature-row .feature-item:nth-child(2){ transition-delay:.09s; }
+.feature-row .feature-item:nth-child(3){ transition-delay:.15s; }
+.feature-row .feature-item:nth-child(4){ transition-delay:.21s; }
+
+.stats-bar .stat:nth-child(1){ transition-delay:.03s; }
+.stats-bar .stat:nth-child(2){ transition-delay:.11s; }
+.stats-bar .stat:nth-child(3){ transition-delay:.19s; }
+.stats-bar .stat:nth-child(4){ transition-delay:.27s; }
+
+.team-grid .team-card:nth-child(1){ transition-delay:.04s; }
+.team-grid .team-card:nth-child(2){ transition-delay:.12s; }
+.team-grid .team-card:nth-child(3){ transition-delay:.2s; }
+
+/* ---------- лінія-роздільник: "малюється" зліва направо ---------- */
+.mend-rule{
+  background-size:0% 1px, 100% 1px;
+  transition:background-size 1.1s cubic-bezier(.16,1,.3,1);
+}
+.mend-rule.is-visible{
+  background-size:12px 1px, 100% 1px;
+}
+
+/* ---------- кнопки: м'який підйом при наведенні ---------- */
+.btn{ transition:background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.btn:hover{ transform:translateY(-2px); }
+.btn-primary:hover{ box-shadow:0 8px 20px rgba(182,138,70,.28); }
+
+/* ---------- картки практик/послуг: легкий підйом при наведенні ---------- */
+.practice-card, .service-row{ transition-property:opacity, transform, background; }
+.practice-card:hover{ transform:translateY(-3px); }
+
+/* ---------- лічильник статистики: цифри трохи "дихають" на появі ---------- */
+.stat .n{ display:inline-block; }
+
+@media (prefers-reduced-motion: reduce){
+  .hero .eyebrow, .hero h1, .hero .hero-lede, .hero .hero-actions,
+  .page-hero .eyebrow, .page-hero h1, .page-hero .desc,
+  .hero .hero-aside, .page-hero .hero-aside{
+    animation:none !important; opacity:1 !important; transform:none !important;
+  }
+  .practice-card, .service-row, .team-card, .approach-item, .statute-item,
+  .feature-item, .badge-item, .stat, .section-head{
+    opacity:1 !important; transform:none !important; transition:none !important;
+  }
+  .btn:hover{ transform:none; }
+  .practice-card:hover{ transform:none; }
+}
