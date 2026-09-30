@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Сила права — Юридична компанія</title>
-<meta name="description" content="Сила права: відновлення документів на нерухомість, оформлення прав власності для «єВідновлення», технічна інвентаризація, реєстрація нерухомості та сімейні спори.">
+<meta name="description" content="Сила права: відновлення документів на нерухомість, оформлення прав власності для «єВідновлення», технічна інвентаризація, реєстрація нерухомості, захист прав на окупованих територіях та сімейні спори.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -14,9 +14,27 @@
 <style>
   .practice-grid {
     background: transparent !important;
+    grid-template-columns: repeat(3, 1fr) !important;
   }
   .practice-card {
     border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1.is-visible { transition-delay: 0.08s; }
+  .reveal-delay-2.is-visible { transition-delay: 0.16s; }
+  .reveal-delay-3.is-visible { transition-delay: 0.24s; }
+  .reveal-delay-4.is-visible { transition-delay: 0.32s; }
+  .reveal-delay-5.is-visible { transition-delay: 0.4s; }
+  @media (max-width: 860px) {
+    .practice-grid { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -45,10 +63,10 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Онлайн-офіс · Куп'янськ, Вовчанськ, Харківська область</p>
-        <h1>Відновимо ваші права<br><em>на нерухомість.</em></h1>
-        <p class="hero-lede">Допомагаємо власникам відновити документи на нерухомість у Куп'янську, Вовчанську та по всій Харківській області — навіть коли архіви БТІ знищено, а первинних паперів немає.</p>
-        <div class="hero-actions">
+        <p class="eyebrow reveal">Онлайн-офіс · Куп'янськ, Вовчанськ, Харківська область</p>
+        <h1 class="reveal reveal-delay-1">Відновимо ваші права<br><em>на нерухомість.</em></h1>
+        <p class="hero-lede reveal reveal-delay-2">Допомагаємо власникам відновити документи на нерухомість у Куп'янську, Вовчанську та по всій Харківській області — навіть коли архіви БТІ знищено, а первинних паперів немає.</p>
+        <div class="hero-actions reveal reveal-delay-3">
           <a href="contacts.html" class="btn btn-primary">Замовити консультацію</a>
           <a href="services.html" class="btn btn-ghost">Наші послуги</a>
         </div>
@@ -63,28 +81,28 @@
 </section>
 
 <div class="feature-row">
-  <div class="feature-item">
+  <div class="feature-item reveal">
     <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V9L12 3L20 9V20H14V14H10V20H4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="3 3"/></svg></span>
     <div>
       <h4>Без первинних документів</h4>
       <p>Відновлюємо права власності навіть за відсутності паперових оригіналів.</p>
     </div>
   </div>
-  <div class="feature-item">
+  <div class="feature-item reveal reveal-delay-1">
     <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12L9 17L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <div>
       <h4>«єВідновлення» під ключ</h4>
       <p>Повний супровід заявки на компенсацію за знищене або пошкоджене житло.</p>
     </div>
   </div>
-  <div class="feature-item">
+  <div class="feature-item reveal reveal-delay-2">
     <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M12 8V12L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
     <div>
       <h4>Термінові строки</h4>
       <p>Пришвидшене внесення даних у реєстр там, де це має значення для клієнта.</p>
     </div>
   </div>
-  <div class="feature-item">
+  <div class="feature-item reveal reveal-delay-3">
     <span class="ico"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
     <div>
       <h4>Фіксована вартість</h4>
@@ -98,89 +116,88 @@
 </section>
 
 <div class="stats-bar section-dark">
-  <div class="stat"><div class="n">100+</div><div class="l">відновлених справ</div></div>
-  <div class="stat"><div class="n">3</div><div class="l">громади супроводу</div></div>
-  <div class="stat"><div class="n">92%</div><div class="l">справ на користь клієнта</div></div>
-  <div class="stat"><div class="n">5</div><div class="l">напрямів практики</div></div>
+  <div class="stat reveal"><div class="n">100+</div><div class="l">відновлених справ</div></div>
+  <div class="stat reveal reveal-delay-1"><div class="n">3</div><div class="l">громади супроводу</div></div>
+  <div class="stat reveal reveal-delay-2"><div class="n">92%</div><div class="l">справ на користь клієнта</div></div>
+  <div class="stat reveal reveal-delay-3"><div class="n">6</div><div class="l">напрямів практики</div></div>
 </div>
 
 <section class="section-light">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2>Напрями практики</h2>
-      <p class="desc">П'ять напрямів, зосереджених на відновленні прав власності та сімейному праві.</p>
+      <p class="desc">Шість напрямів, зосереджених на відновленні прав власності та сімейному праві.</p>
     </div>
     <div class="practice-grid">
-      <div class="practice-card">
+      <div class="practice-card reveal">
         <span class="num">§ 01</span>
         <h3>Відновлення документів на нерухомість</h3>
         <p>Куп'янськ, Вовчанськ, Харківська область. Відновлення права власності за відсутності або знищення архівів БТІ.</p>
         <a href="services.html" class="more">Детальніше →</a>
       </div>
-      <div class="practice-card">
+      <div class="practice-card reveal reveal-delay-1">
         <span class="num">§ 02</span>
         <h3>Оформлення прав для «єВідновлення»</h3>
         <p>Повна підготовка документів для компенсації за знищене або пошкоджене житло та отримання житлових сертифікатів.</p>
         <a href="services.html" class="more">Детальніше →</a>
       </div>
-      <div class="practice-card">
+      <div class="practice-card reveal reveal-delay-2">
         <span class="num">§ 03</span>
         <h3>Технічна інвентаризація та узаконення</h3>
         <p>Технічні паспорти, введення в експлуатацію та узаконення самочинного будівництва і перепланувань.</p>
         <a href="services.html" class="more">Детальніше →</a>
       </div>
-      <div class="practice-card">
+      <div class="practice-card reveal reveal-delay-3">
         <span class="num">§ 04</span>
         <h3>Термінова реєстрація нерухомості</h3>
         <p>Реєстрація будь-якої складності: втрачені документи, непереоформлена спадщина, відсутні записи в реєстрах.</p>
         <a href="services.html" class="more">Детальніше →</a>
       </div>
-      <div class="practice-card">
+      <div class="practice-card reveal reveal-delay-4">
         <span class="num">§ 05</span>
         <h3>Сімейні спори та розірвання шлюбу</h3>
         <p>Розлучення під ключ, дистанційний супровід, поділ майна, аліменти та встановлення прав власності.</p>
         <a href="services.html" class="more">Детальніше →</a>
       </div>
-      <div class="practice-card">
+      <div class="practice-card reveal reveal-delay-5">
         <span class="num">§ 06</span>
         <h3>Захист прав на житло на окупованих територіях</h3>
         <p>Фіксація права власності, доказова база та підготовка документів для майбутньої компенсації за майно на ТОТ.</p>
         <a href="services.html" class="more">Детальніше →</a>
       </div>
-
     </div>
   </div>
 </section>
 
 <section class="section-alt">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2>Як ми працюємо</h2>
       <p class="desc">Чотири принципи, яких дотримується кожен партнер фірми в кожній справі.</p>
     </div>
     <div class="approach-list">
-      <div class="approach-item">
+      <div class="approach-item reveal">
         <span class="article">Ст. 1</span>
         <div>
           <h3>Особиста відповідальність партнера</h3>
           <p>Справу веде партнер, а не команда молодших юристів — він же відповідає за результат і завжди на зв'язку.</p>
         </div>
       </div>
-      <div class="approach-item">
+      <div class="approach-item reveal reveal-delay-1">
         <span class="article">Ст. 2</span>
         <div>
           <h3>Чесна оцінка перспектив</h3>
           <p>Ми говоримо прямо, якщо шанси на успіх низькі, — навіть якщо це означає відмову від справи.</p>
         </div>
       </div>
-      <div class="approach-item">
+      <div class="approach-item reveal reveal-delay-2">
         <span class="article">Ст. 3</span>
         <div>
           <h3>Прозора вартість</h3>
           <p>Погоджуємо бюджет до старту роботи. Про додаткові витрати повідомляємо заздалегідь і письмово.</p>
         </div>
       </div>
-      <div class="approach-item">
+      <div class="approach-item reveal reveal-delay-3">
         <span class="article">Ст. 4</span>
         <div>
           <h3>Конфіденційність без винятків</h3>
@@ -192,7 +209,7 @@
 </section>
 
 <div class="cta-banner">
-  <div class="container">
+  <div class="container reveal">
     <h2>Опишіть вашу ситуацію — ми відповімо протягом робочого дня</h2>
     <p>Перша консультація допоможе зрозуміти, які документи потрібні саме у вашому випадку.</p>
     <a href="contacts.html" class="btn btn-primary">Зв'язатися з фірмою</a>
@@ -241,5 +258,23 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+});
+</script>
 </body>
 </html>
